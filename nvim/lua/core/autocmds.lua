@@ -8,6 +8,15 @@
 local augroup = vim.api.nvim_create_augroup   -- Create/get autocommand group
 local autocmd = vim.api.nvim_create_autocmd   -- Create autocommand
 
+-- Autocommand
+autocmd('VimEnter', {
+  pattern = '*',
+  callback = function()
+    vim.api.nvim_command('NvimTreeClose')
+    require('nvim-tree').toggle(false, true)
+  end,
+})
+
 -- Highlight on yank
 augroup('YankHighlight', { clear = true })
 autocmd('TextYankPost', {
@@ -69,3 +78,4 @@ autocmd('BufLeave', {
   pattern = 'term://*',
   command = 'stopinsert'
 })
+

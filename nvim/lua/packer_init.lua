@@ -47,6 +47,21 @@ return packer.startup(function(use)
   -- File explorer
   use 'kyazdani42/nvim-tree.lua'
 
+  -- FZF
+  -- You don't need to install this if you already have fzf installed
+  -- use { "junegunn/fzf", run = "./install --all", event = "VimEnter" }
+  -- use { "junegunn/fzf.vim", event = "BufEnter" }
+
+  -- FZF Lua
+  use {
+    "ibhagwan/fzf-lua",
+    event = "BufEnter",
+    requires = { "kyazdani42/nvim-web-devicons" },
+  }
+
+  -- Neovim Sessoin Manager
+  use 'Shatur/neovim-session-manager'
+
   -- Indent line
   use 'lukas-reineke/indent-blankline.nvim'
 

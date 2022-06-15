@@ -18,13 +18,13 @@ vim.g.mapleader = ','
 -----------------------------------------------------------
 
 -- Disable arrow keys
-map('', '<up>', '<nop>')
-map('', '<down>', '<nop>')
-map('', '<left>', '<nop>')
-map('', '<right>', '<nop>')
+-- map('', '<up>', '<nop>')
+-- map('', '<down>', '<nop>')
+-- map('', '<left>', '<nop>')
+-- map('', '<right>', '<nop>')
 
 -- Map Esc to kk
-map('i', 'kk', '<Esc>')
+-- map('i', 'kk', '<Esc>')
 
 -- Clear search highlighting with <leader> and c
 map('n', '<leader>c', ':nohl<CR>')
@@ -42,12 +42,16 @@ map('n', '<C-l>', '<C-w>l')
 -- Reload configuration without restart nvim
 map('n', '<leader>r', ':so %<CR>')
 
--- Fast saving with <leader> and s
-map('n', '<leader>s', ':w<CR>')
-map('i', '<leader>s', '<C-c>:w<CR>')
+-- Fast saving with Ctrl and s
+map('n', '<C-s>', ':w<CR>')
+map('i', '<C-s>', '<Esc>:w<CR>i')
 
 -- Close all windows and exit from Neovim with <leader> and q
 map('n', '<leader>q', ':qa!<CR>')
+
+-- Move between tabs
+map('n', '<C-u>', ':tabprevious<CR>')
+map('n', '<C-o>', ':tabnext<CR>')
 
 -----------------------------------------------------------
 -- Applications and Plugins shortcuts
@@ -64,3 +68,4 @@ map('n', '<leader>n', ':NvimTreeFindFile<CR>')      -- search file
 
 -- Tagbar
 map('n', '<leader>z', ':TagbarToggle<CR>')          -- open/close
+
