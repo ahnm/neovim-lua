@@ -50,6 +50,11 @@ opt.synmaxcol = 240         -- Max column for syntax highlight
 opt.updatetime = 700        -- ms to wait for trigger an event
 
 -----------------------------------------------------------
+-- Move
+-----------------------------------------------------------
+opt.whichwrap = '<,>'       -- Wrap around to next line
+
+-----------------------------------------------------------
 -- Startup
 -----------------------------------------------------------
 -- Disable nvim intro
